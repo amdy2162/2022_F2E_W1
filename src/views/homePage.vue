@@ -1,14 +1,19 @@
 <template>
     <div class="home">
-      <h1>Hello world!!</h1>
+      <navBar></navBar>
     </div>
 </template>
 
 <script>
+import navBar from '@/components/navBar.vue';
+
 export default {
-  name: 'home-page'
+  name: 'home-page',
+  components: {
+    navBar
+  }
 }
 </script>
 
-<style>
+<style scoped>
 </style>
