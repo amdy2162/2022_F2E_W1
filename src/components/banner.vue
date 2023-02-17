@@ -17,16 +17,71 @@
                 
             </div>
 
-            <div class="join-us">
-                <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
-                <img src="@/assets/image/banner/star.png" alt="" class="img-star">
-            </div>
+            <section class="section4">
+                <ul class="loop">
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                    <li>
+                        <img src="@/assets/image/banner/joinus.png" alt="" class="img-joinus"/>
+                        <img src="@/assets/image/banner/star.png" alt="" class="img-star"/>
+                    </li>
+                </ul>
+            </section>
     </div>
 </template>
 
-<script>
+<script>  
+    import gsap from 'gsap'
     export default {
-        
+        mounted() {
+            gsap.to('.loop', {
+            xPercent: "-50",
+            ease: "none",
+            duration: 10,
+            repeat: -1,
+            });
+            gsap.to('.banner-code', {y: 20, duration:1 })
+            gsap.to('.banner-dashboard', {x: -20, duration:1,})
+            
+        }
     }
 </script>
 
@@ -105,14 +160,22 @@
         bottom: 12px;
         width: 194px;
     }
-    .join-us {
-        position: relative;
-        top:10px;
-    }
-    .img-star {
-        position: relative;
-        bottom: 18px;
-        left: 20px;
-    }
 
+    .section4 {
+        overflow: hidden; /*隱藏超出外層容器的元素*/
+        max-width: 100%;
+      }
+    
+      .loop {
+        display: inline-block;
+        font-family: "Dela Gothic One";
+        font-size: 5rem;
+        color: transparent;
+        white-space: nowrap; /*文字必須設為nowrap，否則文字會自動換行*/
+        height: 100%;
+        -webkit-text-stroke: 1px black;
+      }
+      .loop > li {
+        display: inline-block;
+      }
 </style>
